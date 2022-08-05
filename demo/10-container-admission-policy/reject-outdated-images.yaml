@@ -1,0 +1,15 @@
+apiVersion: containersecurity.tigera.io/v1beta1
+kind: ContainerAdmissionPolicy
+metadata:
+  name: reject-outdated-images
+spec:
+  selector: all()
+  namespaceSelector: "apply-container-policies == 'true'"
+  order: 1
+  rules:
+  - action: Allow
+    imageLastScan:
+      operator: "gt"
+      duration:
+        days: 3
+  - action: Reject

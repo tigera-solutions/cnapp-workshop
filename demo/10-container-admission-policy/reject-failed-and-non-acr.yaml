@@ -1,0 +1,21 @@
+apiVersion: containersecurity.tigera.io/v1beta1
+kind: ContainerAdmissionPolicy
+metadata:
+  name: reject-failed-and-non-acr
+spec:
+  selector: all()
+  namespaceSelector: "apply-container-policies == 'true'"
+  order: 10
+  rules:
+  - action: "Reject"
+    imagePath:
+      operator: IsNoneOf
+      values:
+      - "^azurecr.io/.*"
+  - action: Allow
+    imageScanStatus:
+      operator: IsOneOf
+      values:
+      - Pass
+      - Warn
+  - action: Reject
