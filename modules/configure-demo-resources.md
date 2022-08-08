@@ -1,4 +1,4 @@
-# Module 4: Configure demo resources
+# Module 5: Configure demo resources
 
 **Goal:** Deploy and configure demo resources.
 
@@ -51,4 +51,4 @@
     ```
 
 ---
-[Next -> Module 5](../modules/connect-image-registry.md)
+[Next -> Module 6](../modules/use-image-assurance.md)

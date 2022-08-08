@@ -1,8 +1,8 @@
-# Module 5: Connect image registry
+# Module 4: Connect image registry
 
 **Goal:** Add image registry to Calico Cloud management plane.
 
->This **module is optional** but could be required when using a private container image registry to host application images. In the instructor-led workshop, you will be provided with the publicly accessible Azure Container Registry. When following this workshop in a self guided setting, you will need to configure and connect your own container registry.  
+>In the instructor-led workshop, you will be provided with the credentials to access the Azure Container Registry. When following this workshop in a self guided setting, you will need to configure and connect your own container registry.  
 The workshop uses [microservices-demo](https://github.com/GoogleCloudPlatform/microservices-demo) images of versions `v0.3.2` and `v0.3.8`. In the self guided workshop setting you will need to build and push those images to your image registry and then adjust demo application manifests to reference your image registry.
 
 ## Steps
@@ -26,4 +26,4 @@ The workshop uses [microservices-demo](https://github.com/GoogleCloudPlatform/mi
     ![Scan results](../img/scan-results.png)
 
 ---
-[Next -> Module 6](../modules/use-image-assurance.md)
+[Next -> Module 5](../modules/connect-image-registry.md)
