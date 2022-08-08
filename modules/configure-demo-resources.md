@@ -26,8 +26,9 @@
 3. Deploy demo applications.
 
     ```bash
-    # deploy dev app stack
+    # deploy dev app stack and hipstershop app stack
     kubectl apply -f demo/app/dev.yaml
+    kubectl apply -f demo/app/hipstershop_v0.3.2.yaml
     ```
 
 4. Deploy compliance reports.
