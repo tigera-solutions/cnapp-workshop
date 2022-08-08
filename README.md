@@ -1,4 +1,4 @@
-# Cloud-Native application protection workshop
+# Cloud-Native Application Protection Platform workshop
 
 <img src="img/Image-assurance-mitigating-controls.png" alt="Calico on EKS" width="100%"/>
 
