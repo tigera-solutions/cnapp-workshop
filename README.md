@@ -49,7 +49,7 @@ In this workshop we are going to focus on these main use cases:
 
     ```bash
     kubectl delete -f demo/dev/app.manifests.yaml
-    kubectl delete -f https://raw.githubusercontent.com/GoogleCloudPlatform/microservices-demo/master/release/kubernetes-manifests.yaml
+    kubectl delete -f demo/app/hipstershop_v0.3.2.yaml
     ```
 
 2. Delete EKS cluster.
