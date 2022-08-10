@@ -37,7 +37,7 @@
     Deploy container policies.
 
     ```bash
-    kubectl apply -f demo/10-container-admission-policy/reject-failed-and-non-acr.yaml
+    kubectl apply -f demo/10-container-admission-policy/reject-failed.yaml
     ```
 
 3. Deploy application to test container admission policy.
