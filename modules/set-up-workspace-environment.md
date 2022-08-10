@@ -58,7 +58,7 @@ The simplest ways to configure your workspace environment is to either use your 
 3. Download this repo into your environment:
 
     ```bash
-    git clone https://github.com/tigera-solutions/cnap-workshop
+    git clone https://github.com/tigera-solutions/cnapp-workshop
     ```
 
 4. Configure AMI role for Cloud9 workspace.
