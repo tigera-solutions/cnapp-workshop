@@ -72,4 +72,4 @@
     ```
 
 ---
-[Next -> Module 4](../modules/configure-demo-resources.md)
+[Next -> Module 4](../modules/connect-image-registry.md)
