@@ -12,37 +12,28 @@
 
     ```bash
     # install curl utility
-    kubectl exec -it $(kubectl get po -l app=adservice -ojsonpath='{.items[0].metadata.name}') -c main -- sh -c 'apt-get update && apt-get install -y curl && curl --help'
+    kubectl exec -it $(kubectl get po -l app=adservice -ojsonpath='{.items[0].metadata.name}') -- sh -c 'apt-get update && apt-get install -y curl && curl --help'
     ```
 
     b. Test connectivity between workloads within each namespace.
 
     ```bash
-    # test connectivity within dev namespace
-    kubectl -n dev exec -t centos -- sh -c 'curl -m3 -sI http://nginx-svc 2>/dev/null | grep -i http'
-
     # test connectivity within default namespace
-    kubectl exec -it $(kubectl get po -l app=loadgenerator -ojsonpath='{.items[0].metadata.name}') -c main -- sh -c 'curl -m3 -sI frontend 2>/dev/null | grep -i http'
+    kubectl exec -it $(kubectl get po -l app=adservice -ojsonpath='{.items[0].metadata.name}') -- sh -c 'curl -m3 -sI frontend 2>/dev/null | grep -i http'
     ```
 
     c. Test connectivity across namespaces.
 
     ```bash
-    # test connectivity from dev namespace to default namespace
-    kubectl -n dev exec -t centos -- sh -c 'curl -m3 -sI http://frontend.default 2>/dev/null | grep -i http'
-
     # test connectivity from default namespace to dev namespace
-    kubectl exec -it $(kubectl get po -l app=loadgenerator -ojsonpath='{.items[0].metadata.name}') -c main -- sh -c 'curl -m3 -sI http://nginx-svc.dev 2>/dev/null | grep -i http'
+    kubectl exec -it $(kubectl get po -l app=adservice -ojsonpath='{.items[0].metadata.name}') -- sh -c 'curl -m3 -sI http://nginx-svc.dev 2>/dev/null | grep -i http'
     ```
 
-    d. Test connectivity from each namespace to the Internet.
+    d. Test connectivity from adservice to the Internet.
 
     ```bash
-    # test connectivity from dev namespace to the Internet
-    kubectl -n dev exec -t centos -- sh -c 'curl -m3 -sI http://api.twilio.com 2>/dev/null | grep -i http'
-
     # test connectivity from default namespace to the Internet
-    kubectl exec -it $(kubectl get po -l app=loadgenerator -ojsonpath='{.items[0].metadata.name}') -c main -- sh -c 'curl -m3 -sI www.google.com 2>/dev/null | grep -i http'
+    kubectl exec -it $(kubectl get po -l app=adservice -ojsonpath='{.items[0].metadata.name}') -- sh -c 'curl -m3 -sI www.google.com 2>/dev/null | grep -i http'
     ```
 
     All of these tests should succeed if there are no policies in place to govern the traffic for `dev` and `default` namespaces.
