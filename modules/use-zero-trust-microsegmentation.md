@@ -6,13 +6,13 @@
 
 1. Test connectivity between application components and across application stacks.
 
-    a. Add `curl` to `loadgenerator` component to run test commands.
+    a. Add `curl` to `adservice` component to run test commands.
 
     >Note that package addition to a running pod will be removed as soon as the pod is restarted.
 
     ```bash
     # install curl utility
-    kubectl exec -it $(kubectl get po -l app=loadgenerator -ojsonpath='{.items[0].metadata.name}') -c main -- sh -c 'apt-get update && apt-get install -y curl && curl --help'
+    kubectl exec -it $(kubectl get po -l app=adservice -ojsonpath='{.items[0].metadata.name}') -c main -- sh -c 'apt-get update && apt-get install -y curl && curl --help'
     ```
 
     b. Test connectivity between workloads within each namespace.
