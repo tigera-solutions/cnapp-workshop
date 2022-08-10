@@ -1,7 +1,7 @@
 apiVersion: containersecurity.tigera.io/v1beta1
 kind: ContainerAdmissionPolicy
 metadata:
-  name: reject-failed-and-non-acr
+  name: reject-failed
 spec:
   selector: all()
   namespaceSelector: "apply-container-policies == 'true'"
