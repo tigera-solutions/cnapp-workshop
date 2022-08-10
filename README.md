@@ -48,7 +48,7 @@ In this workshop we are going to focus on these main use cases:
 1. Delete application stack to clean up any `loadbalancer` services.
 
     ```bash
-    kubectl delete -f demo/dev/app.manifests.yaml
+    kubectl delete -f demo/app/dev.yaml
     kubectl delete -f demo/app/hipstershop_v0.3.2.yaml
     ```
 
