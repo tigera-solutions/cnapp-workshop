@@ -49,6 +49,18 @@
     kubectl apply -f demo/50-alerts/unsanctioned.dns.access.yaml
     kubectl apply -f demo/50-alerts/unsanctioned.lateral.access.yaml
     ```
+6. upgrade openssl from 1.0 to 1.1 
 
+``bash 
+sudo yum -y update
+sudo yum install -y make gcc perl-core pcre-devel wget zlib-devel
+wget https://ftp.openssl.org/source/openssl-1.1.1k.tar.gz
+sudo tar -xzvf openssl-1.1.1k.tar.gz
+cd openssl-1.1.1k
+sudo ./config --prefix=/usr --openssldir=/etc/ssl --libdir=lib no-shared zlib-dynamic
+sudo make
+sudo make install
+openssl version && cd ..
+```
 ---
 [Next -> Module 6](../modules/use-image-assurance.md)
