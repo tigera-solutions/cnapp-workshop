@@ -26,4 +26,4 @@ The workshop uses [microservices-demo](https://github.com/GoogleCloudPlatform/mi
     ![Scan results](../img/scan-results.png)
 
 ---
-[Next -> Module 5](../modules/connect-image-registry.md)
+[Next -> Module 5](../modules/configure-demo-resources.md)
