@@ -51,7 +51,7 @@
     ```
 6. upgrade openssl from 1.0 to 1.1 
 
-``bash 
+```bash 
 sudo yum -y update
 sudo yum install -y make gcc perl-core pcre-devel wget zlib-devel
 wget https://ftp.openssl.org/source/openssl-1.1.1k.tar.gz
