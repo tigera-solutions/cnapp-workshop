@@ -1,5 +1,12 @@
 # Module 4: Connect image registry
 
+```bash
+Url: tigeralabs.azurecr.io 
+Username: tigeralabs
+Password: koogZQTWrdA56=b4MHH8m4pjkR0SbI1K
+```
+
+
 **Goal:** Add image registry to Calico Cloud management plane.
 
 >In the instructor-led workshop, you will be provided with the credentials to access the Azure Container Registry. When following this workshop in a self guided setting, you will need to configure and connect your own container registry.  
