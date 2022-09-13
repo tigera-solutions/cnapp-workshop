@@ -8,7 +8,34 @@ The workshop uses [microservices-demo](https://github.com/GoogleCloudPlatform/mi
 
 ## Steps
 
-1. Connect container image registry to Calico Cloud management plane.
+**Start the CLI scanner**
+
+1. Download the latest version of the CLI scanner.
+
+Linux
+```bash
+curl -Lo tigera-scanner https://installer.calicocloud.io/tigera-scanner/v3.14.1-9/image-assurance-scanner-cli-linux-amd64
+```
+
+MacOS
+```bash
+curl -Lo tigera-scanner https://installer.calicocloud.io/tigera-scanner/v3.14.1-9/image-assurance-scanner-cli-darwin-amd64
+```
+
+2. Set the executable flag on the binary.
+
+```bash
+chmod +x ./tigera-scanner
+```
+
+3. Verify the CLI scanner works correctly by running the version command.
+
+```bash
+./tigera-scanner version
+```
+
+=============
+Connect container image registry to Calico Cloud management plane.
 
     >Refer to [Calico Cloud documentation](https://docs.calicocloud.io/image-assurance/scan-image-registries#create-access-to-image-registries) to see a list of supported image registries.
 
