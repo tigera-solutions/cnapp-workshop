@@ -49,6 +49,25 @@ docker image list
 **Scan images**
 ========================
 
+**Online scan**
+
+```bash
+./tigera-scanner scan ubuntu:latest --apiurl https://<my-org>.calicocloud.io --token ezBhbGcetc...
+```
+
+
+**Offline scan**
+Scan image locally, do not report results
+
+```bash
+./tigera-scanner scan tigeralabs.azurecr.io/boutiqueshop-demo/adservice:v0.3.2
+```
+
+Scan images with fail and warn thresholds
+
+```bash
+./tigera-scanner scan tigeralabs.azurecr.io/boutiqueshop-demo/adservice:v0.3.2 --fail_threshold 7.0 --warn_threshold 3.9 
+```
 
 
 ---
