@@ -50,6 +50,7 @@ docker image list
 ========================
 
 **Online scan**
+> For online scanning you need to provide calico cloud apiurl and token
 
 ```bash
 ./tigera-scanner scan ubuntu:latest --apiurl https://<my-org>.calicocloud.io --token ezBhbGcetc...
