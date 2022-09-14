@@ -3,8 +3,7 @@
 
 **Goal:** Add image registry to Calico Cloud management plane.
 
->In the instructor-led workshop, you will be provided with the credentials to access the Azure Container Registry. When following this workshop in a self guided setting, you will need to configure and connect your own container registry.  
-The workshop uses [microservices-demo](https://github.com/GoogleCloudPlatform/microservices-demo) images of versions `v0.3.2` and `v0.3.8`. In the self guided workshop setting you will need to build and push those images to your image registry and then adjust demo application manifests to reference your image registry.
+>The workshop uses [microservices-demo](https://github.com/GoogleCloudPlatform/microservices-demo) images of versions `v0.3.2` and `v0.3.8`. In the self guided workshop setting you will need to build and push those images to your image registry and then adjust demo application manifests to reference your image registry.
 
 **Start the CLI scanner**
 ========================
@@ -35,6 +34,17 @@ chmod +x ./tigera-scanner
 **Pull Images**
 ========================
 
+1. pull adservice image v0.3.2
+
+```bash
+docker image pull tigeralabs.azurecr.io/boutiqueshop-demo/adservice:v0.3.2
+```
+
+2. verify the downloaded image.
+
+```bash
+docker image list
+```
 
 **Scan images**
 ========================
