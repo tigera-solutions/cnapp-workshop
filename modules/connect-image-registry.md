@@ -57,6 +57,7 @@ docker image list
 
 
 **Offline scan**
+
 Scan image locally, do not report results
 
 ```bash
