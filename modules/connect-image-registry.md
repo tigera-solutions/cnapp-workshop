@@ -70,6 +70,10 @@ Scan images with fail and warn thresholds
 ./tigera-scanner scan tigeralabs.azurecr.io/boutiqueshop-demo/adservice:v0.3.2 --fail_threshold 7.0 --warn_threshold 3.9 
 ```
 
+**Enable Runtime scanning**
+========================
+
+ ![enable-runtime](../img/enable-runtime.png)
 
 ---
 [Next -> Module 5](../modules/configure-demo-resources.md)
