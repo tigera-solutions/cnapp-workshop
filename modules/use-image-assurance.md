@@ -12,9 +12,9 @@
     # create workdir
     mkdir admission-controller-install && cd admission-controller-install
     # generate certs
-    export URL="https://installer.calicocloud.io/manifests/v3.14.1-1/manifests" && curl ${URL}/generate-open-ssl-key-cert-pair.sh | bash
+    export URL="https://installer.calicocloud.io/manifests/v3.14.1-9/manifests" && curl ${URL}/generate-open-ssl-key-cert-pair.sh | bash
     # generate admission controller manifest
-    export URL="https://installer.calicocloud.io/manifests/v3.14.1-1/manifests" && \
+    export URL="https://installer.calicocloud.io/manifests/v3.14.1-9/manifests" && \
     export IN_NAMESPACE_SELECTOR_KEY="apply-container-policies" && \
     export IN_NAMESPACE_SELECTOR_VALUES="true" && \
     curl ${URL}/install-ia-admission-controller.sh | bash
